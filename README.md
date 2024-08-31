@@ -205,3 +205,6 @@
 </body>
 
 </html>
+git add .
+git commit -m "Updated website code for AquaLabs"
+git push origin main  # or `master` depending on your default branch
