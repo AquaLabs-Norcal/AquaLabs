@@ -24,6 +24,7 @@
                     <a href="#services" class="nav-link">Services</a>
                     <a href="#portfolio" class="nav-link">Portfolio</a>
                     <a href="#contact" class="nav-link">Contact</a>
+                    <a href="order.html" class="nav-link">Place Order</a> <!-- New Tab for Order Page -->
                     <a href="#terms" class="nav-link">Terms</a>
                 </div>
             </div>
@@ -31,7 +32,7 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="home-section bg-center py-32 text-white text-center" style="background-image: url('AquaLabs Uday.jpg'); background-size: contain; background-repeat: no-repeat; height: 100vh;">
+    <section id="home" class="home-section bg-cover bg-center py-32 text-white text-center" style="background-image: url('AquaLabs Uday.jpg'); background-size: cover; background-position: center; height: 100vh; width: 100%;">
         <div class="container mx-auto">
             <h1 class="text-4xl md:text-6xl font-bold">Enhance Your Space with AquaLabs</h1>
             <p class="mt-4 text-lg md:text-2xl">Hassle-Free Aquarium Service—No Upfront Costs, Free Installation</p>
@@ -99,6 +100,7 @@
     <section id="contact" class="py-20">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
+            <p class="text-center mb-4">Phone: (650) 278-8903</p> <!-- Updated with phone number -->
             <form id="contactForm" class="max-w-lg mx-auto">
                 <div class="mb-4">
                     <label for="name" class="block text-sm font-semibold">Name</label>
@@ -106,7 +108,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-semibold">Email</label>
-                    <input type="email" id="email" class="form-input mt-1 block w-full" required>
+                    <input type="email" id="email" class="form-input mt-1 block w-full" placeholder="Enter your email">
                 </div>
                 <div class="mb-4">
                     <label for="phone" class="block text-sm font-semibold">Phone</label>
@@ -141,6 +143,66 @@
     </section>
 
     <script src="scripts.js"></script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaLabs - Place Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white fixed w-full shadow-md z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-teal-500">AquaLabs</a>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About Us</a>
+                    <a href="index.html#services" class="nav-link">Services</a>
+                    <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="order.html" class="nav-link">Place Order</a> <!-- Stays highlighted -->
+                    <a href="index.html#terms" class="nav-link">Terms</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Order and Consultation Form -->
+    <section id="order" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Place an Order or Request a Consultation</h2>
+            <form id="orderForm" class="max-w-lg mx-auto">
+                <!-- Similar fields as in the Contact Form -->
+                <!-- Add consultation and order-specific fields as needed -->
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-semibold">Name</label>
+                    <input type="text" id="name" class="form-input mt-1 block w-full" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-semibold">Email</label>
+                    <input type="email" id="email" class="form-input mt-1 block w-full" placeholder="Enter your email">
+                </div>
+                <!-- Other fields for tank details and consultation requirements -->
+                <button type="submit" class="w-full px-8 py-3 bg-teal-500 text-white font-semibold rounded shadow-md hover:bg-teal-600">Submit Request</button>
+            </form>
+
+            <!-- Link to Service Contract -->
+            <div class="mt-10 text-center">
+                <a href="https://docs.google.com/document/d/1WtUKNSP573QLO-ya1CqiN05-IMCLDoQqlc-mMg5p8dU/edit" class="text-teal-500 underline text-lg" target="_blank">View Service Contract</a>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
