@@ -1,4 +1,3 @@
-# AquaLabs
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +31,7 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="home-section bg-cover bg-center py-32 text-white text-center" style="background-image: url('AquaLabs Cube.jpg');">
+    <section id="home" class="home-section bg-cover bg-center py-32 text-white text-center" style="background-image: url('AquaLabs Uday.jpg');">
         <div class="container mx-auto">
             <h1 class="text-4xl md:text-6xl font-bold">Enhance Your Space with AquaLabs</h1>
             <p class="mt-4 text-lg md:text-2xl">Hassle-Free Aquarium Service—No Upfront Costs, Free Installation</p>
@@ -82,7 +81,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-10">Our Portfolio</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Repeat this block for each image in the portfolio -->
+                <!-- Portfolio Images -->
                 <div class="portfolio-item">
                     <img src="AquaLabs double tank.jpg" alt="Double Tank Design" class="rounded shadow-md">
                 </div>
@@ -90,7 +89,7 @@
                     <img src="AquaLabs triple tank.jpg" alt="Triple Tank Design" class="rounded shadow-md">
                 </div>
                 <div class="portfolio-item">
-                    <img src="Aqualabs single tank.jpg" alt="Single Tank Design" class="rounded shadow-md">
+                    <img src="AquaLabs Yip.jpg" alt="Yip Tank Design" class="rounded shadow-md">
                 </div>
             </div>
         </div>
@@ -145,41 +144,3 @@
 </body>
 
 </html>
-/* Custom Styles */
-.nav-link {
-    color: #4A5568;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    color: #319795;
-}
-
-.service-card {
-    background: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-}
-// Smooth scrolling for navigation
-document.querySelectorAll('a.nav-link').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Form submission
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Thank you for your inquiry! We will get back to you soon.');
-    this.reset();  // Clear the form
-});
