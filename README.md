@@ -31,7 +31,7 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="home-section bg-cover bg-center py-32 text-white text-center" style="background-image: url('AquaLabs Uday.jpg');">
+    <section id="home" class="home-section bg-center py-32 text-white text-center" style="background-image: url('AquaLabs Uday.jpg'); background-size: contain; background-repeat: no-repeat; height: 100vh;">
         <div class="container mx-auto">
             <h1 class="text-4xl md:text-6xl font-bold">Enhance Your Space with AquaLabs</h1>
             <p class="mt-4 text-lg md:text-2xl">Hassle-Free Aquarium Service—No Upfront Costs, Free Installation</p>
@@ -44,7 +44,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="Untitled_drawing_1.png" alt="Founder Headshot" class="rounded-full mx-auto w-64 h-64 object-cover">
+                    <img src="headshot.png" alt="Founder Headshot" class="rounded-full mx-auto w-64 h-64 object-cover">
                 </div>
                 <div class="md:w-1/2 md:pl-10">
                     <h2 class="text-3xl font-bold mb-4">About AquaLabs</h2>
