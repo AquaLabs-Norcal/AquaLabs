@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "HIROMISAKE";
+    src: url(assets/HIROMISAKE.ttf);
+}
+
+@font-face {
+    font-family: "MODERNIA";
+    src: url(assets/Modernia-Regular.otf);
+}
+
+@font-face {
+    font-family: "MODERN-SQUARED";
+    src: url(assets/modern_squared2.ttf);
+}
+
+@font-face {
+    font-family: "GATTE-MODERN";
+    src: url(assets/GatteModern-Medium.otf);
+}
+
+@font-face {
+    font-family: "MODERN-MONO";
+    src: url(assets/Modern_Mono.otf);
+}
+
+.page-title {
+
+}
+
+.main-title-font {
+    font-size: 64px;
+    font-family: "MODERNIA";
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+}
+
+.secondary-title-font {
+    font-family: "MODERN-MONO";
+    font-size: 48px;
+    font-weight:bold;
+    /* font-family: "HIROMISAKE"; */
+}
+
+.tertiary-title-font {
+    font-family: "MODERN-MONO";
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.subtext-font {
+    font-size: 28px;
+    font-family: "MODERN-MONO";
+}
+
+.tiny-font {
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .main-title-font {
+        font-size: 48px;
+    }
+
+    .secondary-title-font {
+        font-size: 36px;
+    }
+
+    .tertiary-title-font {
+        font-size: 28px;
+    }
+
+    .subtext-font {
+        font-size: 16px;
+    }
+
+    .tiny-font {
+        font-size: 12px;
+    }
+}
+
+
+

@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nav-element {
+    color: red;
+    font-weight: bold;
+}
+
+.nav-element:hover {
+    cursor: pointer;
+}
