@@ -58,15 +58,15 @@
 
 @media (max-width: 600px) {
     .main-title-font {
-        font-size: 48px;
-    }
-
-    .secondary-title-font {
         font-size: 36px;
     }
 
-    .tertiary-title-font {
+    .secondary-title-font {
         font-size: 28px;
+    }
+
+    .tertiary-title-font {
+        font-size: 22px;
     }
 
     .subtext-font {

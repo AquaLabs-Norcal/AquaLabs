@@ -110,6 +110,14 @@ form {
 
 @media (max-width: 600px) {
     #logo {
-        /* display: none; */
+        width: 120px;
+    }
+
+    #about-us-left {
+        margin-right: 6px;
+    }
+
+    #about-us-right {
+        margin-left: 6px;
     }
 }
