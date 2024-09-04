@@ -1,0 +1,13 @@
+#overlay1 {
+    position: absolute;
+    /* background: rgb(0, 0, 0); */
+    /* background: rgba(0, 0, 0, 0);  */
+    /* color: #f1f1f1; */
+    width: 100%;
+    /* transition: 10s ease; */
+    opacity:1;
+    /* color: white; */
+    /* font-size: 20px; */
+    /* padding: 20px; */
+    /* text-align: center; */
+}

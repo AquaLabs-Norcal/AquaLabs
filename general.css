@@ -1,11 +1,51 @@
+
+/* ::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+} */
+
+html { scroll-behavior: smooth; }
+
+#home-page-container {
+    transition: opacity 0.2s ease-in-out;
+}
+
+#quote-page-container {
+    transition: opacity 0.2s ease-in-out;
+}
+
 .center {
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
+a {
+    border-bottom: 0px;
+    /* text-decoration: none; */
+    color: black;
+}
+
+#main-title {
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+
+#main-title:hover {
+    cursor: pointer;
+    color: red;
+}
+
 #logo {
     width: 330px;
+    transition: transform 1s;
+}
+
+#logo:hover {
+    transform: rotate(-360deg);
 }
 
 .grey-background {
@@ -28,6 +68,7 @@ form {
 .standard-section {
     margin-top: 120px;
     margin-bottom: 120px;
+    scroll-margin-top: 300px;
 }
 
 .top {
@@ -53,6 +94,11 @@ form {
 
 #contact-us-section {
     justify-content: space-around;
+}
+
+.bottom {
+    align-items: end;
+    align-content: baseline;
 }
 
 

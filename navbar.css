@@ -2,13 +2,25 @@ nav {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .nav-element {
     color: red;
     font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-element:hover {
     cursor: pointer;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 10px;
+    }
 }

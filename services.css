@@ -41,3 +41,18 @@
     padding-right: 30px;
     padding-left: 30px;
 }
+
+#service-agreement-link {
+    color: black;
+    transition: color 0.25s ease-in-out;
+}
+
+#service-agreement-link:hover {
+    color: rgb(255, 93, 93);
+}
+
+@media (max-width: 600px) {
+    #service-tool-img {
+        width: 16%;
+    }
+}

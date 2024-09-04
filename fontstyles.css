@@ -43,7 +43,7 @@
 
 .tertiary-title-font {
     font-family: "MODERN-MONO";
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
 }
 
@@ -52,8 +52,14 @@
     font-family: "MODERN-MONO";
 }
 
+.small-font {
+    font-size: 20px;
+    font-family: "MODERN-MONO";
+}
+
 .tiny-font {
     font-size: 16px;
+    font-family: "MODERN-MONO";
 }
 
 @media (max-width: 600px) {
@@ -62,11 +68,15 @@
     }
 
     .secondary-title-font {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .tertiary-title-font {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    .small-font {
+        font-size: 14px;
     }
 
     .subtext-font {
@@ -76,6 +86,7 @@
     .tiny-font {
         font-size: 12px;
     }
+
 }
 
 

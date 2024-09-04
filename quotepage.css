@@ -1,3 +1,79 @@
 #quote-page-title {
     border-bottom: 1px solid rgb(255, 122, 122);
+    width: 420px;
+}
+
+.form-content-container {
+    /* width: 100%; */
+}
+.quote-input {
+    border: 0px;
+    min-height: 28px;
+    box-shadow: -2px 2px 2px rgb(189, 189, 189);
+    margin-bottom: 10px;
+    resize: none;
+    width: 420px;
+}
+
+.quote-textarea {
+    min-height: 200px;
+}
+
+#quote-page-bottom {
+    justify-content: space-between;
+}
+
+#quote-page-right {
+    width: 50%;
+    /* border: 1px solid rgb(255, 121, 121); */
+    /* box-shadow: -3px 3px 2px rgb(212, 212, 212); */
+}
+
+#quote-page-headshot {
+    border-radius: 50%;
+    /* border: 1px solid rgb(0, 0, 0); */
+}
+
+#quote-page-headshot-container {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.quote-page-label {
+    margin-top: 16px;
+}
+
+#quote-page-button {
+    border: 0px;
+    box-shadow: -2px 2px 2px rgb(189, 189, 189);
+    transition: color 0.25s ease-in-out;
+    font-weight: bold;
+}
+
+#quote-page-button:hover {
+    color: rgb(255, 66, 66);
+    cursor: pointer;
+
+}
+
+#quote-page-image-caption-subtext-container {
+    margin-top: 10px;
+    padding: 30px;
+}
+
+@media (max-width: 900px) {
+    #quote-page-headshot {
+        width: 150px;
+    }
+
+    .quote-input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    #quote-page-headshot {
+        width: 100px;
+    }
 }
