@@ -214,7 +214,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let quotePageButton = document.getElementById("quote-page-button");
     quotePageButton.addEventListener("click", () => {
-        document.getElementById("quote-form").reset();
+        setTimeout(() => {
+            document.getElementById("quote-form").reset();
+        }, 200)
     })
 
 
