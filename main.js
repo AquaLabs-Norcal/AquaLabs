@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.style.opacity = 0;
         overlay.style.position = "";
         document.getElementById("overlay-img").remove();
+        xOutOverlayIcon.style.display = "hidden";
+
     });
     
     function calculateImages() {
@@ -49,12 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         overlayImg.style.maxHeight = "90%";
                         overlayImg.id = "overlay-img";
                         overlayImg.classList.add("invisible");
-                        // overlayImg.classList.remove("invisible");
-                        // overlayImg.classList.add("visible");
+                        overlay.appendChild(overlayImg);
+                        xOutOverlayIcon.style.display = "block";
+                        
                         setTimeout(() => {
                             overlayImg.style.opacity = 1;
                         }, 1)
-                        overlay.appendChild(overlayImg);
                     });
     
                     imageContainer.appendChild(img);
@@ -88,12 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     overlayImg.style.maxHeight = "90%";
                     overlayImg.id = "overlay-img";
                     overlayImg.classList.add("invisible");
-                    // overlayImg.classList.remove("invisible");
-                    // overlayImg.classList.add("visible");
+                    overlay.appendChild(overlayImg);
+                    xOutOverlayIcon.style.display = "block";
+                    
                     setTimeout(() => {
                         overlayImg.style.opacity = 1;
                     }, 1)
-                    overlay.appendChild(overlayImg);
                 });
 
                 imageContainer.appendChild(img);
