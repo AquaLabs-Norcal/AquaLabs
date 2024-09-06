@@ -49,6 +49,7 @@
     position: absolute;
     right: 10px;
     top: 50%;
+    user-select: none;
 }
 
 #slideshow-left-arrow-container {
@@ -59,12 +60,14 @@
     position: absolute;
     left: 10px;
     top: 50%;
+    user-select: none;
 }
 
 .arrow-symbol {
     font-size: 20px;
     font-weight:900;
     color: red;
+    user-select: none;
 }
 
 .arrow-symbol:hover {
