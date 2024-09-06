@@ -24,9 +24,7 @@
     /* border-bottom: 1px solid red; */
 }
 
-#service-section-title {
-    font-size: 48px;
-}
+
 
 #our-services-section {
     margin-top: 120px;
@@ -51,8 +49,53 @@
     color: rgb(255, 93, 93);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     #service-tool-img {
         width: 16%;
     }
+
+    #services-bottom {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .service-container {
+        width: 90%;
+        /* margin-right: 20%; */
+        /* margin-left: 20%; */
+        margin-top: 10px;
+        margin-bottom: 30px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #service-2 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #service-tool-img {
+        display: none;
+    }
+
+    #services-top {
+        text-align: center;
+        justify-content: center;
+    }
+
+    #service-section-title {
+        display: flex;
+        text-align: center;
+    }
+
+    #service-agreement-container {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+
 }

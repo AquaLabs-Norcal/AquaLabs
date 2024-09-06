@@ -7,38 +7,89 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let slideshowDiv = document.getElementById("slideshow-image-container");
     let imageCount = 9;
+    let imageContainerCount;
+    let overlay = document.getElementById("overlay1");
+    let xOutOverlayIcon = document.getElementById("x-out-overlay-icon");
+
+    xOutOverlayIcon.addEventListener("click", () => {
+        overlay.style.opacity = 0;
+        overlay.style.position = "";
+        document.getElementById("overlay-img").remove();
+    });
     
-    if (visualViewport.width > 600) {
-        for (let i = 0; i < imageCount / 3; i++) {
-            let imageContainer = document.createElement("div");
-            slideshowDiv.appendChild(imageContainer);
-            imageContainer.classList.add("slideshow-group");
-            imageContainer.id = `slideshow-group-${i + 1}`;
-            if (i !== 0) {
-                // imageContainer.classList.add("hidden");
-                imageContainer.classList.add("slide-effect");
-            }
-            for (let k = 0; k < 3; k++) {
-                if (i * 3 + k >= imageCount) {
-                    break;
+    function calculateImages() {
+        if (visualViewport.width > 800) {
+            imageContainerCount = 3;
+            for (let i = 0; i < imageCount / 3; i++) {
+                let imageContainer = document.createElement("div");
+                slideshowDiv.appendChild(imageContainer);
+                imageContainer.classList.add("slideshow-group");
+                imageContainer.id = `slideshow-group-${i + 1}`;
+                if (i !== 0) {
+                    // imageContainer.classList.add("hidden");
+                    imageContainer.classList.add("hidden");
                 }
-
+                for (let k = 0; k < 3; k++) {
+                    if (i * 3 + k >= imageCount) {
+                        break;
+                    }
+    
+                    let img = document.createElement("img");
+                    img.src = `assets/FishTank${(i * 3) + k + 1}.jpg`
+                    // img.style.height = "10vw";
+                    img.classList.add("slideshow-image");
+    
+                    img.addEventListener("click", () => {
+                        overlay.style.opacity = 1;
+                        overlay.style.position = "fixed";
+                        
+                        let overlayImg = document.createElement("img");
+                        overlayImg.src = img.src;
+                        overlayImg.style.maxWidth = "90%";
+                        overlayImg.style.maxHeight = "90%";
+                        overlayImg.id = "overlay-img";
+                        overlayImg.classList.add("invisible");
+                        // overlayImg.classList.remove("invisible");
+                        // overlayImg.classList.add("visible");
+                        setTimeout(() => {
+                            overlayImg.style.opacity = 1;
+                        }, 1)
+                        overlay.appendChild(overlayImg);
+                    });
+    
+                    imageContainer.appendChild(img);
+    
+                }
+            }
+        } else {
+            imageContainerCount = 9;
+            for (let i = 0; i < imageCount; i++) {
+                let imageContainer = document.createElement("div");
+                slideshowDiv.appendChild(imageContainer);
+                imageContainer.classList.add("slideshow-group");
+                imageContainer.id = `slideshow-group-${i + 1}`;
+                // imageContainer.width = "75%"
+                if (i !== 0) {
+                    // imageContainer.classList.add("hidden");
+                    imageContainer.classList.add("hidden");
+                }
+    
                 let img = document.createElement("img");
-                img.src = `assets/FishTank${(i * 3) + k + 1}.jpg`
-                img.style.height = "10vw";
+                img.src = `assets/FishTank${i + 1}.jpg`;
+                // img.style.maxWidth = "60hw";
                 img.classList.add("slideshow-image");
-
                 img.addEventListener("click", () => {
                     // document.body.style.backgroundColor = "black"
+                    overlay.style.opacity = 1;
+                    overlay.style.position = "fixed";
+
                 });
-
                 imageContainer.appendChild(img);
-
             }
         }
-    } else {
-        
     }
+    
+    calculateImages();
     
     let slideshowImages = slideshowDiv.children;
 
@@ -47,54 +98,36 @@ document.addEventListener("DOMContentLoaded", () => {
     let slideshowLeftArrow = document.getElementById("slideshow-left-arrow");
     let slideshowRightArrow = document.getElementById("slideshow-right-arrow");
 
-    
-
-    // slideshowLeftArrow.addEventListener("click", () => {
-    //     slideshowImages[pointer].classList.remove("shown-flex");
-    //     slideshowImages[pointer].classList.add("hidden");
-    //     if (pointer === 0) {
-    //         pointer = slideshowImages.length - 1;
-    //     } else {
-    //         pointer -= 1;
-    //     }
-    //     slideshowImages[pointer].classList.remove("hidden");
-    //     slideshowImages[pointer].classList.add("shown-flex");
-    // });
-
-    // slideshowRightArrow.addEventListener("click", () => {
-    //     slideshowImages[pointer].classList.remove("shown-flex");
-    //     slideshowImages[pointer].classList.add("hidden");
-    //     if (pointer === slideshowImages.length - 1) {
-    //         pointer = 0;
-    //     } else {
-    //         pointer += 1;
-    //     }
-    //     slideshowImages[pointer].classList.remove("hidden");
-    //     slideshowImages[pointer].classList.add("shown-flex");
-    // });
 
     slideshowLeftArrow.addEventListener("click", () => {
-        // slideshowImages[pointer].classList.remove("shown-flex");
-        slideshowImages[pointer].classList.add("slide-effect");
+        slideshowImages[pointer].classList.remove("shown-flex");
+        slideshowImages[pointer].classList.add("hidden");
+        slideshowImages[pointer].classList.remove("slide-effect");
         if (pointer === 0) {
             pointer = slideshowImages.length - 1;
         } else {
             pointer -= 1;
         }
-        slideshowImages[pointer].classList.remove("slide-effect");
-        // slideshowImages[pointer].classList.add("shown-flex");
+        slideshowImages[pointer].classList.remove("hidden");
+        slideshowImages[pointer].classList.add("shown-flex");
+        slideshowImages[pointer].classList.toggle("slide-effect");
     });
 
     slideshowRightArrow.addEventListener("click", () => {
-        // slideshowImages[pointer].classList.remove("shown-flex");
-        slideshowImages[pointer].classList.add("slide-effect");
+        
+        slideshowImages[pointer].classList.add("hidden");
+        slideshowImages[pointer].classList.remove("shown-flex");
+        slideshowImages[pointer].classList.remove("slide-effect");
+
+
         if (pointer === slideshowImages.length - 1) {
             pointer = 0;
         } else {
             pointer += 1;
         }
-        slideshowImages[pointer].classList.remove("slide-effect");
-        // slideshowImages[pointer].classList.add("shown-flex");
+        slideshowImages[pointer].classList.remove("hidden");
+        slideshowImages[pointer].classList.add("shown-flex");
+        slideshowImages[pointer].classList.toggle("slide-effect");
     });
 
     let getQuoteNavLink = document.getElementById("get-quote-nav-link");
@@ -217,7 +250,25 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             document.getElementById("quote-form").reset();
         }, 200)
-    })
+    });
+
+    window.addEventListener("resize", () => {
+        if (visualViewport.width < 800 && imageContainerCount === 3) {
+            let groups = document.querySelectorAll(".slideshow-group");
+            for (let i = 0; i < groups.length; i++) {
+                groups[i].remove();
+            }
+            calculateImages();
+            pointer = 0;
+        } else if (visualViewport.width > 800 && imageContainerCount === 9) {
+            let groups = document.querySelectorAll(".slideshow-group");
+            for (let i = 0; i < groups.length; i++) {
+                groups[i].remove();
+            }
+            calculateImages();
+            pointer = 0;
+        }
+    });
 
 
     // slideshowDiv.appendChild(slideshowImg1);

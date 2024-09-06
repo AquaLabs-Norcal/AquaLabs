@@ -1,13 +1,32 @@
 #overlay1 {
-    position: absolute;
-    /* background: rgb(0, 0, 0); */
-    /* background: rgba(0, 0, 0, 0);  */
-    /* color: #f1f1f1; */
-    width: 100%;
-    /* transition: 10s ease; */
-    opacity:1;
-    /* color: white; */
-    /* font-size: 20px; */
-    /* padding: 20px; */
-    /* text-align: center; */
+    z-index: 9999;
+    opacity: 0;
+    background-color: #000000f2;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* position: fixed; */
+    inset: 0;
+}
+
+#x-out-overlay-icon:hover {
+    cursor: pointer;
+}
+
+#x-out-overlay-icon {
+    top: 10%;
+    right: 7%;
+    position: fixed;
+}
+
+#overlay-img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
 }
