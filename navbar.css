@@ -24,4 +24,9 @@ nav {
     nav {
         gap: 10px;
     }
+
+    .nav-element:hover {
+        color: red;
+    }
+
 }
