@@ -79,11 +79,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 // img.style.maxWidth = "60hw";
                 img.classList.add("slideshow-image");
                 img.addEventListener("click", () => {
-                    // document.body.style.backgroundColor = "black"
                     overlay.style.opacity = 1;
                     overlay.style.position = "fixed";
-
+                    
+                    let overlayImg = document.createElement("img");
+                    overlayImg.src = img.src;
+                    overlayImg.style.maxWidth = "90%";
+                    overlayImg.style.maxHeight = "90%";
+                    overlayImg.id = "overlay-img";
+                    overlayImg.classList.add("invisible");
+                    // overlayImg.classList.remove("invisible");
+                    // overlayImg.classList.add("visible");
+                    setTimeout(() => {
+                        overlayImg.style.opacity = 1;
+                    }, 1)
+                    overlay.appendChild(overlayImg);
                 });
+
                 imageContainer.appendChild(img);
             }
         }
@@ -114,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     slideshowRightArrow.addEventListener("click", () => {
-        
+
         slideshowImages[pointer].classList.add("hidden");
         slideshowImages[pointer].classList.remove("shown-flex");
         slideshowImages[pointer].classList.remove("slide-effect");
