@@ -7,9 +7,10 @@
     /* width: 100%; */
 }
 .quote-input {
-    border: 0px;
+    border: 1px solid black;
     min-height: 28px;
-    box-shadow: -2px 2px 2px rgb(189, 189, 189);
+    box-shadow: -4px 4px 4px rgb(189, 189, 189);
+
     margin-bottom: 10px;
     resize: none;
     width: 420px;
@@ -32,7 +33,7 @@
 #quote-page-headshot {
     border-radius: 50%;
     box-shadow: -3px 4px 4px rgb(167, 167, 167);
-    /* border: 1px solid rgb(0, 0, 0); */
+    border: 2px solid rgb(0, 0, 0);
 }
 
 #quote-page-headshot-container {
@@ -46,14 +47,15 @@
 }
 
 #quote-page-button {
-    border: 0px;
+    border: 1px solid black;
     box-shadow: -2px 2px 2px rgb(189, 189, 189);
     transition: color 0.25s ease-in-out;
     font-weight: bold;
+    padding: 4px;
 }
 
 #quote-page-button:hover {
-    color: rgb(255, 66, 66);
+    color: rgb(255, 50, 50);
     cursor: pointer;
 
 }
@@ -61,6 +63,16 @@
 #quote-page-image-caption-subtext-container {
     margin-top: 10px;
     padding: 30px;
+}
+
+@media (max-width: 1100px) {
+    #quote-page-headshot {
+        width: 170px;
+    }
+
+    /* .quote-input {
+        width: 200px;
+    } */
 }
 
 @media (max-width: 900px) {

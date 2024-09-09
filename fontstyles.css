@@ -62,6 +62,32 @@
     font-family: "MODERN-MONO";
 }
 
+@media (max-width: 1400px) {
+    .main-title-font {
+        font-size: 60px;
+    }
+    .secondary-title-font {
+        font-size: 40px;
+    }
+
+    .tertiary-title-font {
+        font-size: 28px;
+    }
+
+    .subtext-font {
+        font-size: 24px;
+    }
+
+    .small-font {
+        font-size: 18px;
+    }
+
+    .tiny-font {
+        font-size: 14px;
+    }
+}
+
+
 @media (max-width: 600px) {
     .main-title-font {
         font-size: 36px;
