@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentPage = "home";
     
     let slideshowDiv = document.getElementById("slideshow-image-container");
-    let imageCount = 9;
+    let imageCount = 8;
     let imageContainerCount;
     let overlay = document.getElementById("overlay1");
     let xOutOverlayIcon = document.getElementById("x-out-overlay-icon");
@@ -89,11 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         img.classList.add("slideshow-image");
         img.id = `FishTank${imgNum}`;
+        img.style.zIndex = 1;
 
         img.addEventListener("click", () => {
             overlay.style.opacity = 1;
             overlay.style.position = "fixed";
-            
             let overlayImg = document.createElement("img");
             overlayImg.src = img.src;
             overlayImg.style.maxWidth = "90%";
@@ -112,7 +112,15 @@ document.addEventListener("DOMContentLoaded", () => {
         imgDiv.classList.add("single-image-container");
 
         imgDiv.appendChild(img);
-        // imgDiv.appendChild(generateImageSubtext(imgNum));
+        imgDiv.appendChild(generateImageSubtext(imgNum));
+
+        let clickToExpandText = document.createElement("div");
+        clickToExpandText.classList.add("small-font");
+        clickToExpandText.style.fontWeight = "Bold";
+        clickToExpandText.classList.add("click-to-expand-text");
+        clickToExpandText.innerHTML = "Click to Expand";
+        // clickToExpandText.maxWidth = "110px";
+        imgDiv.appendChild(clickToExpandText);
         
         
     
@@ -180,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             slideshowImages[pointer].classList.add("slide-out-to-right-effect"); //instantly have current images slide out to left on click
             slideshowImages[pointer].style.position = "absolute";//change to absolute to prevent page interaction during animation
-            slideshowImages[pointer].style.left = "0";
+            // slideshowImages[pointer].style.left = "0";
             let prev;
 
             if (pointer === 0) {
@@ -202,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 slideshowImages[prev].classList.add("hidden");
                 slideshowImages[prev].classList.remove("slide-in-from-left-effect");
                 slideshowImages[prev].classList.remove("slide-out-to-right-effect");
-                slideshowImages[prev].style.position = "relative";
+                // slideshowImages[prev].style.position = "relative";
                 slideshowImages[pointer].classList.remove("slide-in-from-left-effect");
             }, 645);
             
@@ -221,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             slideshowImages[pointer].classList.add("slide-out-to-left-effect"); //instantly have current images slide out to left on click
             slideshowImages[pointer].style.position = "absolute";//change to absolute to prevent page interaction during animation
-            slideshowImages[pointer].style.left = "0";
+            // slideshowImages[pointer].style.left = "0";
             let prev;
 
             if (pointer === slideshowImages.length - 1) {
@@ -243,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 slideshowImages[prev].classList.add("hidden");
                 slideshowImages[prev].classList.remove("slide-in-from-right-effect");
                 slideshowImages[prev].classList.remove("slide-out-to-left-effect");
-                slideshowImages[prev].style.position = "relative";
+                // slideshowImages[prev].style.position = "relative";
                 slideshowImages[pointer].classList.remove("slide-in-from-right-effect");
             }, 645);
             
@@ -359,7 +367,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     document.getElementById("logo").addEventListener("mouseover", () => {
-        document.getElementById("audio1").play();
+        if (visualViewport.width > 800) {
+            document.getElementById("audio1").play();
+        }
     });
 
     let quotePageButton = document.getElementById("quote-page-button");

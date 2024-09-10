@@ -193,6 +193,12 @@ form {
     }
 }
 
+@media (max-width: 800px) {
+    #logo:hover {
+        transform: rotate(0deg);
+    }
+}
+
 @media (max-width: 768px) {
     .page-container {
         margin-left: 6px;
