@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let imageContainerCount;
     let overlay = document.getElementById("overlay1");
     let xOutOverlayIcon = document.getElementById("x-out-overlay-icon");
+    xOutOverlayIcon.style.display = "none";
     let leftArrowClickActive = true;
     let rightArrowClickActive = true;
 
@@ -131,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.style.opacity = 0;
         overlay.style.position = "";
         document.getElementById("overlay-img").remove();
-        xOutOverlayIcon.style.display = "hidden";
+        xOutOverlayIcon.style.display = "none";
 
     });
     
