@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let homePage = document.getElementById("home-page-container");
     let quotePage = document.getElementById("quote-page-container");
+    let servicesPage = document.getElementById("services-page-container");
     let currentPage = "home";
     
     let slideshowDiv = document.getElementById("slideshow-image-container");
@@ -264,105 +265,80 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let getQuoteNavLink = document.getElementById("get-quote-nav-link");
+    let servicesNavLink = document.getElementById("services-nav-link");
     quotePage.style.opacity = 0;
 
-    function swapPage() {
-        if (currentPage === "home") {
-            let count = 0;
+    function swapPage(fromPage, toPage) {
 
-            homePage.style.opacity = 0;
-            let interval = setInterval(() => {
-                if (count === 1) {
-                    homePage.classList.add("hidden");
-                    homePage.classList.remove("shown-block");
-                } else if (count === 2) {
-                    quotePage.classList.remove("hidden");
-                    quotePage.classList.add("shown-block");
-                } else if (count === 3) {
-                    quotePage.style.opacity = 1;
-                    currentPage = "quote";
-                    clearInterval(interval);
-                }
+        let f = document.getElementById(`${fromPage}-page-container`);
+        let t = document.getElementById(`${toPage}-page-container`);
 
-                count += 1;
-                
-            }, 100)
-    
-        } else {
-            let count = 0;
+        let count = 0;
+        f.style.opacity = 0;
+        let interval = setInterval(() => {
+            if (count === 1) {
+                f.classList.add("hidden");
+                f.classList.remove("shown-block");
+            } else if (count === 2) {
+                t.classList.remove("hidden");
+                t.classList.add("shown-block");       
+            } else if (count === 3) {
+                t.style.opacity = 1;
+                currentPage = toPage;
+                clearInterval(interval);
+            }
 
-            quotePage.style.opacity = 0;
-            let interval = setInterval(() => {
-                if (count === 1) {
-                    quotePage.classList.add("hidden");
-                    quotePage.classList.remove("shown-block");
-                } else if (count === 2) {
-                    homePage.classList.remove("hidden");
-                    homePage.classList.add("shown-block");
-                } else if (count === 3) {
-                    homePage.style.opacity = 1;
-                    currentPage = "home";
-                    clearInterval(interval);
-                }
+            count += 1;
+        }, 100);       
+    };
 
-                count += 1;
-                
-            }, 100)
-        }
-    }
+    servicesNavLink.addEventListener("click", () => {
+        if (currentPage !== "services") {
+            swapPage(currentPage, "services");
+        };
+    });
 
     getQuoteNavLink.addEventListener("click", () => {
-        if (currentPage === "home") {
-            swapPage();
-
+        if (currentPage !== "quote") {
+            swapPage(currentPage, "quote");
         }
     });
 
     document.getElementById("main-title").addEventListener("click", () => {
         if (currentPage !== "home") {
-            swapPage();
+            swapPage(currentPage, "home");
             currentPage = "home";
-        }
+        };
     });
 
     document.getElementById("about-link").addEventListener("click", () => {
         if (currentPage !== "home") {
-            swapPage();
+            swapPage(currentPage, "home");
             currentPage = "home";
             setTimeout(() => {
                 document.getElementById("about-us-section").scrollIntoView();
-            }, 300)
-        }
+            }, 300);
+        };
     });
 
     document.getElementById("designs-link").addEventListener("click", () => {
         if (currentPage !== "home") {
-            swapPage();
+            swapPage(currentPage, "home");
             currentPage = "home";
             setTimeout(() => {
                 document.getElementById("slideshow-container").scrollIntoView();
-            }, 300)
-        }
-    });
-
-    document.getElementById("services-link").addEventListener("click", () => {
-        if (currentPage !== "home") {
-            swapPage();
-            currentPage = "home";
-            setTimeout(() => {
-                document.getElementById("our-services-section").scrollIntoView();
-            }, 300)
-        }
+            }, 300);
+        };
     });
 
     document.getElementById("contact-link").addEventListener("click", () => {
         if (currentPage !== "home") {
-            swapPage();
+            swapPage(currentPage, "home");
             currentPage = "home";
             setTimeout(() => {
                 document.getElementById("contact-us-section").scrollIntoView();
-            }, 300)
-        }
+            }, 300);
+        };
     });
 
     
@@ -370,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("logo").addEventListener("mouseover", () => {
         if (visualViewport.width > 800) {
             document.getElementById("audio1").play();
-        }
+        };
     });
 
     let quotePageButton = document.getElementById("quote-page-button");
@@ -395,6 +371,125 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             calculateImages();
             pointer = 0;
+        };
+    });
+
+    let service1Toggled = false;
+    let service2Toggled = false;
+    let s1 = document.getElementById("service-1-show-more");
+    let s2 = document.getElementById("service-2-show-more");
+
+    let s1b = document.getElementById("services-show-more-button-1");
+    let s2b = document.getElementById("services-show-more-button-2");
+
+    function showService(element, elementButton) {
+        element.style.display = "block";
+        setTimeout(() => {
+            element.style.height = "1500px";
+            elementButton.innerHTML = "Show Less";
+        }, 25);
+        setTimeout(() => {
+            document.getElementById("services-show-more-section").scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }, 325);
+        return true;
+    };
+
+    function hideService(element, elementButton) {
+        element.style.height = "0px";
+        setTimeout(() => {
+            element.style.display = "none";
+            elementButton.innerHTML = "Show More";
+        }, 260);
+    };
+
+    s1b.addEventListener("click", () => {
+
+        if (!service1Toggled) {
+
+            if (service2Toggled) {
+                service2Toggled = hideService(s2, s2b);
+            }
+
+            service1Toggled = showService(s1,s1b);
+            
+        } else {
+            service1Toggled = hideService(s1,s1b);
+        };
+
+    });
+
+
+    s2b.addEventListener("click", () => {
+        if (!service2Toggled) {
+            if (service1Toggled) {
+                service1Toggled = hideService(s1, s1b);
+            }
+
+            service2Toggled = showService(s2,s2b);
+        } else {
+            service2Toggled = hideService(s2,s2b);
+        };
+    });
+
+    document.getElementById("services-show-less-button-1").addEventListener("click", () => {
+        if (service1Toggled) {
+            s1.style.height = "0px";
+            service1Toggled = false;
+            setTimeout(() => {
+                s1.style.display = "none";
+            }, 260);
+        };
+    });
+
+    document.getElementById("services-show-less-button-2").addEventListener("click", () => {
+        if (service2Toggled) {
+            s2.style.height = "0px";
+            service2Toggled = false;
+            setTimeout(() => {
+                s2.style.display = "none";
+            }, 260);
+        };
+    });
+
+
+    let droppeddown = false;
+
+    document.getElementById("home-nav-dropdown").addEventListener("click", () => {
+        if (!droppeddown) {
+            document.getElementById("home-dropdown").style.display = "flex";
+            setTimeout(() => {
+                document.getElementById("dropdown-content").style.height = "120px";
+                document.getElementById("arrow-svg").style.transform = "rotate(180deg)";
+            }, 30)
+            droppeddown = true;
+        } else {
+            document.getElementById("dropdown-content").style.height = "0px";
+            setTimeout(() => {
+
+                document.getElementById("arrow-svg").style.transform = "rotate(0deg)";
+            }, 10)
+            setTimeout(() => {
+                document.getElementById("home-dropdown").style.display = "none";
+            }, 500)
+            droppeddown = false;
+        }
+    });
+
+    let articleArrow = document.getElementById("article-dropdown");
+    let articleActive = false;
+
+    articleArrow.addEventListener("click", () => {
+        if (!articleActive) {
+            document.getElementById("article-references-bottom-container").style.height = "120px";
+            articleArrow.style.transform = "rotate(180deg)";
+            articleActive = true;
+        } else {
+            document.getElementById("article-references-bottom-container").style.height = "0px";
+            articleArrow.style.transform = "rotate(0deg)";
+            articleActive = false;
         }
     });
 

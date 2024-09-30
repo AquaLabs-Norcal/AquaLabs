@@ -1,34 +1,37 @@
 #services-bottom {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 60px;
-    text-align: left;
+    justify-content: center;
+    gap: 20%;
+    margin-top: 40px;
+    text-align: center;
+    border-bottom: 1px solid rgb(255,122,122);
+    padding-bottom: 30px;
 }
 
 #services-top {
+    padding-bottom: 10px;
     border-bottom: 1px solid rgb(255, 122, 122);
     width: 100%;
-    text-align: left;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .service-container {
-    width: 33%;
+    width: 50%;
     /* padding-left: 10px; */
     /* padding-right: 10px; */
 }
 
-.service-title {
-    margin-bottom: 10px;
-    /* border-bottom: 1px solid red; */
+.service-description {
+    margin-top: 10px;
 }
 
 
 
 #our-services-section {
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin-top: 10px;
+    /* margin-bottom: 120px; */
 }
 
 #service-tool-img {
@@ -36,8 +39,8 @@
 }
 
 #service-2 {
-    padding-right: 30px;
-    padding-left: 30px;
+    /* padding-right: 30px; */
+    /* padding-left: 30px; */
 }
 
 #service-agreement-link {
@@ -49,7 +52,156 @@
     color: rgb(255, 93, 93);
 }
 
+#service-1-show-more-button {
+
+}
+
+#service-2-show-more-button {
+    
+}
+
+.service-show-more-bundle {
+    /* margin-top: 16px; */
+    /* margin-bottom: 16px; */
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    width: 84%;
+    /* margin-top: 3.2%; */
+    /* border: 1px solid red; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.service-modal {
+    /* display: flex; */
+    border: 1px solid red;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    /* height: 90%; */
+    max-height: 80%;
+    width: 60%;
+    /* height: 80%; */
+    position: fixed;
+    /* background-color: white; */
+    left: 20%;
+    top: 10%;
+    z-index: 999;
+    /* align-items: end; */
+    overflow-y: scroll;
+    
+}
+
+.service-modal-content {
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 95vh; */
+    overflow-y: auto;
+    /* max-height: 80vh; */
+}
+
+
+
+.modal-x-out {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    max-width: 25px;
+}
+
+.modal-x-out:hover {
+    cursor: pointer;
+}
+
+.show-more-button {
+    margin-top: 18px;
+    border: 1px solid black;
+    box-shadow: -2px 2px 2px rgb(189, 189, 189);
+    transition: color 0.25s ease-in-out;
+    font-weight: bold;
+    padding: 4px;
+}
+
+
+.show-more-button:hover {
+    color: rgb(255, 50, 50);
+    cursor: pointer;
+}
+
+#services-show-more-section {
+    margin-top: 60px;
+    scroll-margin-top: 40px;
+    padding-bottom: 100px;
+}
+
+.service-more-info-title {
+    display: flex;
+    padding-bottom: 4px;
+    /* color: rgb(255,50,50); */
+    /* border-bottom: 1px solid black; */
+}
+
+.service-more-info-header {
+    margin-bottom: 40px;
+    /* color: rgb(255,50,50); */
+}
+
+.service-more-info-subsection-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.service-show-more {
+    overflow: hidden;
+    transition: height, opacity, 0.25s ease-in-out;
+    scroll-margin-top: 400px;
+}
+
+
+@media (max-width: 1200px) {
+    .service-modal {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media (max-width: 800px) {
+    .service-modal {
+        width: 90%;
+        left: 5%;
+    }
+
+    .service-show-more-bundle {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+
 @media (max-width: 700px) {
+
+    .service-modal {
+        width: 98%;
+        left: 1%;
+        /* min-height: 96%; */
+        /* bottom: 2%; */
+        /* gap: 40px; */
+    }
+
+    .service-show-more-bundle {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
     #service-tool-img {
         width: 16%;
     }
@@ -100,3 +252,4 @@
     }
 
 }
+

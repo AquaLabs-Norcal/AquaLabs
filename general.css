@@ -7,6 +7,10 @@
     background: #fff;
 } */
 
+body {
+    margin: 0px;
+}
+
 html { scroll-behavior: smooth; }
 
 #home-page-container {
@@ -14,6 +18,10 @@ html { scroll-behavior: smooth; }
 }
 
 #quote-page-container {
+    transition: opacity 0.2s ease-in-out;
+}
+
+#services-page-container {
     transition: opacity 0.2s ease-in-out;
 }
 
@@ -29,8 +37,15 @@ a {
     color: black;
 }
 
+
+
 img {
     user-select: none;
+}
+
+.dash-li {
+    list-style: none;
+    /* margin-left: 3px; */
 }
 
 #main-title {
@@ -41,6 +56,10 @@ img {
 #main-title:hover {
     cursor: pointer;
     color: red;
+}
+
+.bolded {
+    font-weight: bold;
 }
 
 #logo {

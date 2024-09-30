@@ -1,7 +1,7 @@
 nav {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    gap: 100px;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -13,6 +13,7 @@ nav {
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     user-select: none;
+    display: block;
 }
 
 .nav-element:hover {
@@ -20,13 +21,70 @@ nav {
     color: black;
 }
 
+#home-nav-dropdown {
+}
+
+#home-dropdown {
+    float: left;
+    position: relative;
+    flex-direction: column;
+    display: none;
+    /* background-color: rgb(243,243,243); */
+}
+
+#dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    /* background-color: rgb(243,243,243); */
+    left: 0;
+    top: 20px;
+    float: left;
+    position: absolute;
+    padding: 10px;
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    transition: height, 0.2s ease-in-out;
+    background-color: white;
+    /* border-bottom: 1px solid rgb(255,50,50); */
+    /* border-right: 1px solid rgb(255,50,50); */
+    /* border-left: 1px solid rgb(255,50,50); */
+    /* padding-left: 6px; */
+    /* padding-right: 6px; */
+}
+
+.sub-nav {
+    /* margin-top: 60px; */
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.rotate-img {
+    transition: transform, 0.25s ease-in-out;
+}
+
 @media (max-width: 600px) {
     nav {
-        gap: 10px;
+        position: relative;
+        gap: 26px;
     }
 
     .nav-element:hover {
         color: red;
     }
 
+    #arrow-svg {
+        max-width: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+    #arrow-svg {
+        /* top: 10px; */
+        top: -2px;
+    }
 }

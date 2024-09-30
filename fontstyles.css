@@ -27,6 +27,10 @@
 
 }
 
+.aqualabs-red {
+    color: rgb(224,50,50);
+}
+
 .main-title-font {
     font-size: 64px;
     font-family: "MODERNIA";
@@ -52,6 +56,11 @@
     font-family: "MODERN-MONO";
 }
 
+.nav-font {
+    font-size: 28px;
+    font-family: "MODERN-MONO";
+}
+
 .small-font {
     font-size: 20px;
     font-family: "MODERN-MONO";
@@ -59,6 +68,17 @@
 
 .tiny-font {
     font-size: 16px;
+    font-family: "MODERN-MONO";
+}
+
+.service-modal-title-font {
+    font-family: "MODERN-MONO";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.service-modal-subtext-font {
+    font-size: 18px;
     font-family: "MODERN-MONO";
 }
 
@@ -78,11 +98,33 @@
         font-size: 24px;
     }
 
+    .nav-font {
+        font-size: 24px;
+    }
+
     .small-font {
         font-size: 18px;
     }
 
     .tiny-font {
+        font-size: 14px;
+    }
+
+    .service-modal-title-font {
+        font-size: 26px;
+    }
+    
+    .service-modal-subtext-font {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .service-modal-title-font {
+        font-size: 22px;
+    }
+
+    .service-modal-subtext-font {
         font-size: 14px;
     }
 }
@@ -109,11 +151,39 @@
         font-size: 16px;
     }
 
+    .nav-font {
+        font-size: 16px;
+    }
+
     .tiny-font {
         font-size: 12px;
     }
 
+    .service-modal-title-font {
+        font-size: 18px;
+    }
+    
+    .service-modal-subtext-font {
+        font-size: 13px;
+    }
+
 }
+
+@media (max-width: 359px) {
+    .service-modal-title-font {
+        font-size: 15px;
+    }
+
+    .service-modal-subtext-font {
+        font-size: 12px;
+    }
+
+    .nav-font {
+        font-size: 14px;
+    }
+}
+
+
 
 
 
