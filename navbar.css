@@ -29,6 +29,7 @@ nav {
     position: relative;
     flex-direction: column;
     display: none;
+
     /* background-color: rgb(243,243,243); */
 }
 
@@ -42,7 +43,8 @@ nav {
     top: 20px;
     float: left;
     position: absolute;
-    padding: 10px;
+    /* padding: 10px; */
+    /* padding-left: 50px; */
     height: 0px;
     padding: 0px;
     margin: 0px;
@@ -79,6 +81,10 @@ nav {
 
     #arrow-svg {
         max-width: 18px;
+    }
+
+    #dropdown-content {
+        max-height: 130px;
     }
 }
 

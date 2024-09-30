@@ -461,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!droppeddown) {
             document.getElementById("home-dropdown").style.display = "flex";
             setTimeout(() => {
-                document.getElementById("dropdown-content").style.height = "120px";
+                document.getElementById("dropdown-content").style.height = "180px";
                 document.getElementById("arrow-svg").style.transform = "rotate(180deg)";
             }, 30)
             droppeddown = true;
