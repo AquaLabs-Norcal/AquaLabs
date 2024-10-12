@@ -67,9 +67,9 @@ img {
     transition: transform 1s;
 }
 
-#logo:hover {
+/* #logo:hover {
     transform: rotate(-360deg);
-}
+} */
 
 .grey-background {
     background-color: rgb(243, 243, 243);
@@ -126,6 +126,14 @@ form {
 
 .white-background {
     background-color: white;
+}
+
+.hyper-link {
+    transition: color 0.3s ease-in-out;
+}
+
+.hyper-link:hover {
+    color: rgb(255, 122,122);
 }
 
 @media (max-width: 1700px) {
@@ -216,6 +224,7 @@ form {
     #logo:hover {
         transform: rotate(0deg);
     }
+
 }
 
 @media (max-width: 768px) {

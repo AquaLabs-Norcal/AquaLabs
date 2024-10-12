@@ -65,6 +65,19 @@
     padding: 30px;
 }
 
+.quote-page-steps-header-container {
+    margin-bottom: 20px;
+}
+
+.quote-page-steps-subsection-container {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.quote-page-steps-subsection-title {
+    margin-bottom: 8px;
+}
+
 @media (max-width: 1100px) {
     #quote-page-headshot {
         width: 170px;

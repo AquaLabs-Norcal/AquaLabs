@@ -272,6 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let f = document.getElementById(`${fromPage}-page-container`);
         let t = document.getElementById(`${toPage}-page-container`);
+        dropdownToggleOff();
 
         let count = 0;
         f.style.opacity = 0;
@@ -301,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
     getQuoteNavLink.addEventListener("click", () => {
         if (currentPage !== "quote") {
             swapPage(currentPage, "quote");
-        }
+        };
     });
 
     document.getElementById("main-title").addEventListener("click", () => {
@@ -319,6 +320,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("about-us-section").scrollIntoView();
             }, 300);
         };
+        dropdownToggleOff();
+    });
+
+    document.getElementById("values-link").addEventListener("click", () => {
+        if (currentPage !== "home") {
+            swapPage(currentPage, "home");
+            currentPage = "home";
+            setTimeout(() => {
+                document.getElementById("article-container").scrollIntoView();
+            }, 300);
+        };
+        dropdownToggleOff();
     });
 
     document.getElementById("designs-link").addEventListener("click", () => {
@@ -329,6 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("slideshow-container").scrollIntoView();
             }, 300);
         };
+        dropdownToggleOff();
     });
 
     document.getElementById("contact-link").addEventListener("click", () => {
@@ -339,21 +353,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("contact-us-section").scrollIntoView();
             }, 300);
         };
+        dropdownToggleOff();
     });
 
     
 
-    document.getElementById("logo").addEventListener("mouseover", () => {
-        if (visualViewport.width > 800) {
-            document.getElementById("audio1").play();
-        };
+    // document.getElementById("logo").addEventListener("mouseover", () => {
+    //     if (visualViewport.width > 800) {
+    //         document.getElementById("audio1").play();
+    //     };
+    // });
+
+    let logoRotation = 0;
+
+
+    document.getElementById("logo").addEventListener("click", () => {
+        document.getElementById("logo").style.transform = `rotate(${logoRotation - 360}deg)`;
+        logoRotation -= 360;
+        document.getElementById("audio1").play();
+        // if (!rotatedLogo) {
+        //     document.getElementById("logo").style.transform = `rotate${logoRotation + 360}deg`;
+
+        //     document.getElementById("audio1").play();
+        // } else {
+        //     document.getElementById("logo").style.transform = "rotate(0deg)";
+
+        //     document.getElementById("audio1").play();
+        // }
     });
 
     let quotePageButton = document.getElementById("quote-page-button");
     quotePageButton.addEventListener("click", () => {
         setTimeout(() => {
             document.getElementById("quote-form").reset();
-        }, 200)
+        }, 200);
     });
 
     window.addEventListener("resize", () => {
@@ -414,7 +447,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             service1Toggled = showService(s1,s1b);
-            
         } else {
             service1Toggled = hideService(s1,s1b);
         };
@@ -440,6 +472,7 @@ document.addEventListener("DOMContentLoaded", () => {
             service1Toggled = false;
             setTimeout(() => {
                 s1.style.display = "none";
+                s1b.innerHTML = "Show More";
             }, 260);
         };
     });
@@ -450,23 +483,24 @@ document.addEventListener("DOMContentLoaded", () => {
             service2Toggled = false;
             setTimeout(() => {
                 s2.style.display = "none";
+                s2b.innerHTML = "Show More";
             }, 260);
         };
     });
 
-
+    
+    
     let droppeddown = false;
-
-    document.getElementById("home-nav-dropdown").addEventListener("click", () => {
-        if (!droppeddown) {
-            document.getElementById("home-dropdown").style.display = "flex";
+    function dropdownToggleOn() {
+        document.getElementById("home-dropdown").style.display = "flex";
             setTimeout(() => {
                 document.getElementById("dropdown-content").style.height = "180px";
                 document.getElementById("arrow-svg").style.transform = "rotate(180deg)";
             }, 30)
-            droppeddown = true;
-        } else {
-            document.getElementById("dropdown-content").style.height = "0px";
+        droppeddown = true;
+    }
+    function dropdownToggleOff() {
+        document.getElementById("dropdown-content").style.height = "0px";
             setTimeout(() => {
 
                 document.getElementById("arrow-svg").style.transform = "rotate(0deg)";
@@ -474,7 +508,14 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 document.getElementById("home-dropdown").style.display = "none";
             }, 500)
-            droppeddown = false;
+        droppeddown = false;
+    }
+    
+    document.getElementById("home-nav-dropdown").addEventListener("click", () => {
+        if (!droppeddown) {
+            dropdownToggleOn();
+        } else {
+            dropdownToggleOff();
         }
     });
 

@@ -124,7 +124,7 @@
                         HOME <img src="assets/ic-arrow-down.svg" style="position: absolute;" id="arrow-svg" class="rotate-img">
                     </a>
                     <div id="home-dropdown">
-                        <div id="dropdown-content">
+                        <div id="dropdown-content" style="z-index: 9999;">
                             <a id="about-link" href="#about-us-section" class="nav-element nav-font sub-nav">ABOUT</a>
                             <a id="designs-link" href="#slideshow-container" class="nav-element nav-font sub-nav">DESIGNS</a>
                             <a id="values-link" href="#article-container" class="nav-element nav-font sub-nav">VALUE</a>
@@ -204,24 +204,36 @@
                 </div>
             </div>
 
-            <div id="article-container" class="small-font">
-                <div id="article-title" class="tertiary-title-font">Value: Business Benefits</div>
-                <div class="article-description">Aquariums not only serve to enhance customer experience but also drive measurable business results. 
-                    Studies show that aquariums in waiting areas can <b> increase positive customer feedback by 15%, reduce anxiety by 35%, and even boost repeat visits by 11%.</b>
-                     In cafes and restaurants, aquariums <b>lead to customers staying 20% longer.</b>
+            <div id="article-container" class="subtext-font">
+                <div id="article-title-container">
+
+                    <div id="article-title" class="secondary-title-font">Value: Business Benefits</div>
+                </div>
+
+                <div id="article-references-chart-container">
+                    <img src="assets/chart.png" class="chart">
+                </div>
+                <div class="article-description">Aquariums not only serve as decor but also drive measurable business results. All statistics cited are drawn from reputable academic journals.
                 </div>
                 <ul>
                     <li class="dash-li">
-                        - <b class="aqualabs-red">Stress & Anxiety Relief: </b>Watching fish swim has been proven to <b>lower heart rate and blood pressure by up to 16%.</b> Aquariums create a tranquil, stress-relieving atmosphere.
+                        - <b class="aqualabs-red">Increased Browsing Time in Retail: </b>Aquariums can <b>increase browsing times by up to 30% in retail settings,</b> actually leading to more sales opportunities. The calming and engaging environment encourages customers to stay longer and explore the space. <a  class="hyper-link" href="https://consensus.app/papers/marine-biota-psychological-wellbeing-cracknell/0d0f08bfb8925c54a5264d4fa30793e1/?">(Cracknell et al., 2015)</a>
                     </li>
                     <li class="dash-li">
-                        - <b class="aqualabs-red">Mood Elevation & Focus: </b>Aquariums improve mood and boost endorphins, leading to increased happiness and even heightened employee productivity in workspaces.
+                        - <b class="aqualabs-red">Perceived Waiting Time Reduction: </b>Aquariums serve as a natural distraction, making wait times feel shorter and more pleasant—ideal for <b>waiting rooms</b> and <b>lounges</b>. It has been shown that customers will <b>perceive wait times as 25% shorter in the presence of an aquarium</b>.<a class="hyper-link" href="https://consensus.app/papers/daquarium-digital-aquarium-reduce-perceived-waiting-time-son/79f12168f9245f45a3817849c51a370f/?" >(Son et al., 2018)</a>
                     </li>
                     <li class="dash-li">
-                        - <b class="aqualabs-red">Perceived Waiting Time Reduction: </b>Aquariums serve as a natural distraction, making wait times feel shorter and more pleasant—ideal for waiting rooms and lounges. The journal of Environment and Behavior reports waiting areas with natural elements like aquariums can <b>reduce perceived wait times by up to 33%.</b>
+                        - <b class="aqualabs-red">Mood Elevation & Focus: </b>Aquariums improve mood and boost endorphins, <b>leading to a 12% improvement of mood</b> <a  class="hyper-link" href="https://consensus.app/papers/marine-biota-psychological-wellbeing-cracknell/0d0f08bfb8925c54a5264d4fa30793e1/?">(Cracknell et al., 2015)</a> and even heightened employee productivity in workspaces.
                     </li>
+                    
                     <li class="dash-li">
                         - <b class="aqualabs-red">Your Business’s Image:</b> A professionally maintained aquarium leaves a lasting impression, demonstrating attention to detail improving overall ambiance.
+                    </li>
+                    <li class="dash-li">
+                        - <b class="aqualabs-red">Improved Customer Behavior:</b> <b>Aquariums reduce disruptive behavior by 13.4%</b>. <a class="hyper-link" href="https://consensus.app/papers/influence-aquariums-resident-behavior-staff-edwards/08990641767c539f90eb1e134cd4e8b2/?">(Edwards et al., 2014)</a>
+                    </li>
+                    <li class="dash-li">
+                        - <b class="aqualabs-red">Increased Customer Satisfaction:</b> Installing aquariums in waiting areas <b>improves customer satisfaction by up to 15%</b>, as it creates a relaxing environment, reducing anxiety and enhancing the overall waiting experience. <a class="hyper-link" href="https://consensus.app/papers/influence-aquariums-resident-behavior-staff-edwards/08990641767c539f90eb1e134cd4e8b2/?">(Edwards et al., 2014)</a>
                     </li>
                 </ul>
                 <div class="article-description">
@@ -229,65 +241,17 @@
                     With the aesthetic, psychological, and proven business benefits combined, it is clear that a display tank is an investment that pays for itself. 
                 </div>
                 
-                <div id="article-references-chart-container">
-                    <img src="assets/barchart.png" class="chart">
-                </div>
-                <div id="article-references-header-container" class="small-font shown-flex">
+                
+                <div id="article-references-header-container" class="tertiary-title-font shown-flex">
                     <div id="article-references-header">
                         <b>
-                            References
+                            Meta-Analysis: The Business Impact of Aquariums in Retail Stores
                         </b>
                     </div>
                     <img id="article-dropdown" src="assets/ic-arrow-down.svg" class="rotate-img-small">
                 </div>
-                <div id="article-references-bottom-container">
-                    <ul>
-                        <!-- <li class="dash-li">
-                            - Grand View Research: <a href="https://www.grandviewresearch.com/" class="red-hover">
-                                Ornamental Fish Market Insights
-                            </a>
-                        </li> -->
-                        <!-- <li class="dash-li">
-                            - SpringerLink: <a href="https://link.springer.com/" class="red-hover">
-                                Customer Satisfaction and Business Performance​
-                            </a>
-                        </li> -->
-                        <li class="dash-li">
-                            - Fishkeeping World: <a class="red-hover" href="https://www.fishkeepingworld.com/10-reasons-why-you-need-an-aquarium-in-your-workplace/">
-                                10 Reasons Why You Need an Aquarium in Your Workplace
-                            </a>
-                        </li>
-                        <li class="dash-li">
-                            - Plos One: <a class="red-hover" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0258118">
-                                Effect of the presence of an aquarium in the waiting area on the stress, anxiety and mood of adult dental patients: A controlled clinical trial
-                            </a>
-                        </li>
-                        <!-- <li class="dash-li">
-                            - Armco Aquariums: <a href="https://armcoaquatics.com/" class="red-hover">
-                                Benefits of Aquariums in Waiting Rooms​
-                            </a>
-                        </li> -->
-                        <!-- <li class="dash-li">
-                            - Aquatic Warehouse: <a href="https://www.aquaticwarehouse.com/" class="red-hover">4 Benefits of Having an Aquarium at Your Workplace</a>
-                        </li> -->
-                        <!-- <li class="dash-li">
-                            - Living Art Aquariums: <a href="https://www.livingartaquariumsny.com/" class="red-hover">
-                                The Healing Power of Aquariums: Science-Backed Health Benefits​
-                            </a>
-                        </li> -->
-                        <!-- <li class="dash-li">
-                            - ASTC: <a href="https://www.astc.org/" class="red-hover">
-                                Aquariums as a Force for Change: New Roles in Conservation and Social Impact
-                            </a>
-                        </li> -->
-                        <!-- <li class="dash-li">
-                            - FinModelsLab: <a href="https://finmodelslab.com/" class="red-hover">7 Key KPIs for Aquarium Efficiency</a>
-                        </li> -->
-                        <!-- <li class="dash-li">
-                            - Environment and Behavior Journal: <a href="https://journals.sagepub.com/home/eab"></a>
-                        </li> -->
-                        
-                    </ul>
+                <div id="article-references-bottom-container" class="subtext">
+                    To Be Posted 10/14/2024
                 </div>
             </div>
             
@@ -378,6 +342,28 @@
                 
 
             </div>
+
+            <div class="standard-section">
+
+                <div class="quote-page-steps-header-container">
+                    <div class="secondary-title-font">Concept to Completion: A Three Step Process</div>
+                </div>
+
+                <div class="quote-page-steps-subsection-container">
+                    <div class="tertiary-title-font quote-page-steps-subsection-title">Step 1: Get A Quote</div>
+                    <div class="subtext-font">Begin by visiting the "Get A Quote" section on the AquaLabs website. Complete a brief form with your name and contact details. The lead aquarist, Jiro Nomiya, will personally reach out to discuss your tank's specifications. Whether you choose an aquarium from our current inventory or opt for a custom design, this is your opportunity to tailor every aspect of the installation. You can ask questions, explore design possibilities, and settle on a price that aligns with your business needs. Once you're satisfied, simply sign the service contract to move forward.</div>
+                </div>
+
+                <div class="quote-page-steps-subsection-container">
+                    <div class="tertiary-title-font quote-page-steps-subsection-title">Step 2: Schedule Your Installation</div>
+                    <div class="subtext-font">After your tank is prepared, Jiro will coordinate with you to arrange the installation. If you’ve selected a pre-designed aquarium, we can often install it as early as the next day. For custom builds, installation is typically scheduled 1-2 weeks after the final agreement. Our expert installation team manages the entire process, and the best part is that everything is included in your service contract—no hidden fees or unexpected costs.</div>
+                </div>
+
+                <div class="quote-page-steps-subsection-container">
+                    <div class="tertiary-title-font quote-page-steps-subsection-title">Step 3: Ongoing Maintenance</div>
+                    <div class="subtext-font">Now, you can enjoy your stunning aquarium without any worries. AquaLabs handles all aspects of maintenance, including routine cleaning, water checks, and feeding. Our team will visit as needed to ensure your tank remains in pristine condition. With AquaLabs, comprehensive maintenance is part of the package, allowing you to relax and enjoy your vibrant aquatic display hassle-free.</div>
+                </div>
+            </div>
         </div>
 
         <div id="services-page-container" class="page-container hidden">
@@ -433,6 +419,7 @@
                     <div id="service-1-show-more" class="service-show-more" style="display: none; height: 0px">
                         <div id="service-1-more-info" class="subtext-font service-more-info">
                             <div class="service-more-info-header tertiary-title-font">Flat Rate Subscription Model</div>
+                            <a href="assets/Independent Contractor Service Agreement Subscription Model.pdf" class="red-hover small-font service-pdf-link">Subscription Model Service Agreement.pdf</a>
                             <div class="service-more-info-subsection-container">
                                 <div class="service-more-info-title bolded">Support Local Artistry</div>
                                 <div class="service-more-info-description">Partner with AquaLabs to support creations from an independent, artist-owned studio.</div>
@@ -484,7 +471,10 @@
                     </div>
                     <div id="service-2-show-more" class="service-show-more" style="display: none;">
                         <div id="service-2-more-info" class="subtext-font service-more-info">
-                            <div class="service-more-info-header tertiary-title-font">Upfront Savings Plan</div>
+                            <div class="service-more-info-header-container">
+                                <div class="service-more-info-header tertiary-title-font">Upfront Savings Plan</div>
+                                <a href="assets/Independent Contractor Service agreement Upfront Saving Plan.pdf" class="red-hover small-font service-pdf-link">Upfront Savings Plan Service Agreement.pdf</a>
+                            </div>
                             <div class="service-more-info-subsection-container">
                                 <div class="service-more-info-title bolded">Cost-Effective Service Pricing</div>
                                 <div class="service-more-info-description">The Upfront Savings Plan offers a budget-friendly alternative by combining an initial setup 

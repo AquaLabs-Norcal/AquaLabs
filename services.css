@@ -151,9 +151,17 @@
     /* border-bottom: 1px solid black; */
 }
 
+.service-pdf-link {
+    margin-bottom: 600px;
+}
+
 .service-more-info-header {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     /* color: rgb(255,50,50); */
+}
+
+.service-more-info-header-container {
+    margin-bottom: 32px;
 }
 
 .service-more-info-subsection-container {

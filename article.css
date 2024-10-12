@@ -1,11 +1,17 @@
 #article-container {
     font-family: "MODERN-MONO";
     margin-top: 120px;
+    line-height: 28px;
 }
 
 #article-title {
-    border-bottom: 1px solid rgb(224,50,50);
+    /* border-bottom: 1px solid rgb(224,122,122); */
     margin-bottom: 20px;
+}
+
+#article-title-container {
+    line-height: 0px;
+    border-bottom: 1px solid rgb(224,122,122);
 }
 
 .article-description {
@@ -51,8 +57,13 @@
 }
 
 .chart {
+    max-height: 600px;
     margin-top: 20px;
     max-width: 90%;
+}
+
+.dash-li {
+    margin-top: 20px;
 }
 
 @media (max-width: 800px) {
