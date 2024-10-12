@@ -33,7 +33,6 @@ html { scroll-behavior: smooth; }
 
 a {
     border-bottom: 0px;
-    /* text-decoration: none; */
     color: black;
 }
 
@@ -59,8 +58,8 @@ img {
 }
 
 .bolded {
-    font-weight: bold;
-}
+    font-weight: bold; 
+} 
 
 #logo {
     width: 330px;

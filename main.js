@@ -349,6 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentPage !== "home") {
             swapPage(currentPage, "home");
             currentPage = "home";
+
             setTimeout(() => {
                 document.getElementById("contact-us-section").scrollIntoView();
             }, 300);
@@ -356,13 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dropdownToggleOff();
     });
 
-    
 
-    // document.getElementById("logo").addEventListener("mouseover", () => {
-    //     if (visualViewport.width > 800) {
-    //         document.getElementById("audio1").play();
-    //     };
-    // });
 
     let logoRotation = 0;
 
