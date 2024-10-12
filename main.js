@@ -515,9 +515,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let articleArrow = document.getElementById("article-dropdown");
+    let articleReferencesHeader = document.getElementById("article-references-header");
     let articleActive = false;
 
     articleArrow.addEventListener("click", () => {
+        if (!articleActive) {
+            document.getElementById("article-references-bottom-container").style.height = "120px";
+            articleArrow.style.transform = "rotate(180deg)";
+            articleActive = true;
+        } else {
+            document.getElementById("article-references-bottom-container").style.height = "0px";
+            articleArrow.style.transform = "rotate(0deg)";
+            articleActive = false;
+        }
+    });
+
+    articleReferencesHeader.addEventListener("click", () => {
         if (!articleActive) {
             document.getElementById("article-references-bottom-container").style.height = "120px";
             articleArrow.style.transform = "rotate(180deg)";

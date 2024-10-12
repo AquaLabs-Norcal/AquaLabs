@@ -24,7 +24,12 @@
 }
 
 #article-references-header {
+    user-select: none;
     /* width: 22%; */
+}
+
+#article-references-header:hover {
+    cursor: pointer;
 }
 
 #article-references-bottom-container {
