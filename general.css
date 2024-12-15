@@ -50,6 +50,7 @@ img {
 #main-title {
     color: black;
     transition: color 0.3s ease-in-out;
+    margin-bottom: 18px;
 }
 
 #main-title:hover {
@@ -88,8 +89,8 @@ form {
 }
 
 .standard-section {
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     scroll-margin-top: 300px;
 }
 
@@ -133,6 +134,10 @@ form {
 
 .hyper-link:hover {
     color: rgb(255, 122,122);
+}
+
+#about-us-section {
+    margin-top: 40px;
 }
 
 @media (max-width: 1700px) {
